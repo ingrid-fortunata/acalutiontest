@@ -1,0 +1,37 @@
+.listcard-container {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.listcard-container-rightside {
+  margin: 5% 1% auto 0;
+}
+
+.listcard-title {
+  color: darkgoldenrod;
+  /* margin-bottom: 2%; */
+}
+
+.list-card-info {
+  font-weight: 700;
+  font-size: 110%;
+}
+
+.list-card-info p {
+  margin: 2% auto;
+}
+
+.list-card-price {
+  margin: 5% 3% 5% auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-card-price p {
+  background-color: goldenrod;
+  color: white;
+  padding: 2% 2%;
+  border-radius: 50px;
+}

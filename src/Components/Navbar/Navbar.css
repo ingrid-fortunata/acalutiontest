@@ -1,0 +1,79 @@
+.navbar-container {
+  display: flex;
+  background-color: black;
+  color: white;
+  /* justify-content: center; */
+}
+
+.navbar-burger-icon {
+  margin: 2%;
+}
+
+.navbar-burger-icon svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.navbar-logo img {
+  width: 70%;
+  height: 70%;
+}
+
+.search-container {
+  margin: 1.5% auto;
+  width: 50%;
+}
+
+.search-components {
+  width: 150%;
+}
+
+.search-components-input {
+  padding: 1.5% 1%;
+  border-radius: solid black 5px;
+  font-size: medium;
+  outline: none;
+  width: 80%;
+}
+
+.search-components-button {
+  /* height: 90%;
+  width: 10%; */
+  padding: 1.5% 1%;
+  border-radius: solid gray 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+.navbar-signup {
+  margin: 1.8% auto;
+}
+
+.navbar-signup a {
+  text-decoration: none;
+  color: white;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.navbar-signup a:hover {
+  color: gray;
+}
+
+.navbar-shopping {
+  margin: 1.8% auto;
+}
+
+.navbar-shopping svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.navbar-shopping svg:hover {
+  color: gray;
+}

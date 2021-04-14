@@ -1,0 +1,42 @@
+.list-card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-add {
+  background-color: goldenrod;
+  color: white;
+  cursor: pointer;
+  padding: 5% 8%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 5px gray;
+  outline: none;
+}
+
+.button-add:active {
+  box-shadow: none;
+}
+
+/* .list-card-buttons svg {
+  width: 30px;
+  height: 30px;
+  margin: 3% auto;
+  cursor: pointer;
+} */
+
+.button-bookmark {
+  background-color: white;
+  border: none;
+  margin: 3% auto;
+  cursor: pointer;
+  outline: none;
+  width: 30px;
+  height: 30px;
+}
+
+.button-bookmark svg {
+  width: 35px;
+  height: 35px;
+  color: goldenrod;
+}
