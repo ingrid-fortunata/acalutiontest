@@ -18,6 +18,12 @@
   box-shadow: none;
 }
 
+.button-add:hover {
+  background-color: rgb(255, 183, 0);
+  color: #4c3a27;
+  font-weight: bold;
+}
+
 /* .list-card-buttons svg {
   width: 30px;
   height: 30px;
@@ -39,4 +45,9 @@
   width: 35px;
   height: 35px;
   color: goldenrod;
+}
+
+.button-bookmark svg:hover {
+  font-weight: bold;
+  color: #4c3a27;
 }

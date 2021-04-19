@@ -18,7 +18,7 @@
   width: 30vw;
   height: 110vh;
   cursor: zoom-in;
-  border: 1px solid lightgray;
+  border: 1px solid #4c3a2746;
   border-radius: 10px;
 }
 
@@ -42,7 +42,6 @@
 }
 
 .productdetails-text {
-  color: black;
   font-size: 140%;
   font-weight: 500;
 }
@@ -80,9 +79,9 @@
 }
 
 .productdetails-table-info {
-  color: black;
   font-size: 130%;
   font-weight: 400;
+  color: #4c3a27;
 }
 
 @media screen and (max-width: 600px) {

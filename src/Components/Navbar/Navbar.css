@@ -1,12 +1,16 @@
 .navbar-container {
   display: flex;
-  background-color: black;
+  background-color: #3b3838;
   color: white;
   /* justify-content: center; */
 }
 
 .navbar-burger-icon {
   margin: 2%;
+}
+
+.navbar-burger-icon svg:hover {
+  color: goldenrod;
 }
 
 .navbar-burger-icon svg {
@@ -31,7 +35,7 @@
 
 .search-components-input {
   padding: 1.5% 1%;
-  border-radius: solid black 5px;
+  border-radius: solid #3b3838 5px;
   font-size: medium;
   outline: none;
   width: 80%;
@@ -41,10 +45,10 @@
   /* height: 90%;
   width: 10%; */
   padding: 1.5% 1%;
-  border-radius: solid gray 5px;
+  border-radius: solid#4c3a27 5px;
   font-size: 1rem;
   cursor: pointer;
-  background-color: black;
+  background-color: #3b3838;
   color: white;
   outline: none;
 }
@@ -61,7 +65,7 @@
 }
 
 .navbar-signup a:hover {
-  color: gray;
+  color: goldenrod;
 }
 
 .navbar-shopping {
@@ -75,5 +79,5 @@
 }
 
 .navbar-shopping svg:hover {
-  color: gray;
+  color: goldenrod;
 }

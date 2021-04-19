@@ -41,7 +41,7 @@ function Buttons({ name, qty }) {
             padding: "5% 8%",
             border: "none",
             borderRadius: "5px",
-            boxShadow: "2px 5px black",
+            boxShadow: "2px 5px #3b3838",
             outline: "none",
           }}
           disabled="disabled"

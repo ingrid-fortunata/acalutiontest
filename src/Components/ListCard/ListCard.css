@@ -1,12 +1,24 @@
 .listcard-container {
   display: flex;
-  border: 1px solid gray;
+  border: 1px solid #4c3a2728;
   border-radius: 10px;
   padding: 1%;
+  opacity: 1;
+}
+
+.listcard-container:hover {
+  /* background-color: rgba(211, 211, 211, 0.138); */
+  /* background-color: rgba(210, 210, 210, 0.31); */
+  background-color: #4c3a2712;
+  opacity: 0.8;
+}
+
+.listcard-container img {
+  border-radius: 10px;
 }
 
 .listcard-container-rightside {
-  margin: 5% 1% auto 0;
+  margin: 5% 1% auto 2%;
 }
 
 .listcard-title {
@@ -17,16 +29,19 @@
 .list-card-info {
   font-weight: 700;
   font-size: 110%;
+  color: #4c3a27;
 }
 
 .list-card-info p {
   margin: 2% auto;
+  color: #4c3a27;
 }
 
 .list-card-price {
   margin: 5% 3% 5% auto;
   display: flex;
   justify-content: space-between;
+  color: #4c3a27;
 }
 
 .list-card-price p {

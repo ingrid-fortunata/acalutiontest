@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Swal from "sweetalert2";
 import Buttons from "../Components/Buttons/Buttons";
 import "./ProductDetails.css";
 
@@ -18,6 +19,13 @@ function ProductDetails(props) {
         `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/${id}`
       )
       .then((res) => setWineDetails(res.data.value));
+    // .catch((err) => {
+    //   Swal.fire({
+    //     icon: "error",
+    //     title: "Oops...",
+    //     text: "something went wrong!",
+    //   })
+    // })
   };
 
   // fetchWineDetails();
@@ -30,7 +38,13 @@ function ProductDetails(props) {
     <div>
       <div className="productdetails-container">
         <div className="breadcrumbs">
-          Home &#9658; Products &#9658; {wineDetails.grapeVarieties} &#9658;{" "}
+          <Link
+            to="/"
+            style={{ textDecoration: "underline", color: "darkgoldenrod" }}
+          >
+            Home
+          </Link>{" "}
+          &#9658; Products &#9658; {wineDetails.grapeVarieties} &#9658;{" "}
           {wineDetails.country}{" "}
         </div>
 
@@ -44,7 +58,7 @@ function ProductDetails(props) {
 
             <div className="productdetails-text">
               {wineDetails.grapeVarieties}{" "}
-              {wineDetails.vintageYear === 0
+              {wineDetails.vintageYear === "0"
                 ? "Non Vintage"
                 : wineDetails.vintageYear}
             </div>

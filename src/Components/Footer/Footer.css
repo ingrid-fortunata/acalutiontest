@@ -1,0 +1,34 @@
+.footer-container {
+  background-color: #3b3838;
+  color: rgba(255, 255, 255, 0.6);
+  min-height: 25vh;
+  font-size: 150%;
+  margin: 5% auto 0 auto;
+}
+
+.footer-contain {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  letter-spacing: 1.5px;
+}
+
+.footer-contain h5 {
+  color: white;
+}
+
+.footer-contain h6 {
+  font-weight: 300;
+  margin: 3% auto;
+}
+
+.footer-copyright {
+  margin-top: 2%;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-contain {
+    flex-direction: column;
+  }
+}

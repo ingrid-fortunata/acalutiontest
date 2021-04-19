@@ -1,65 +1,75 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ListCard from "../Components/ListCard/ListCard";
 import "./ProductListing.css";
+import Swal from "sweetalert2";
 
-export default class ProductListing extends Component {
-  state = {
-    wineLists: [],
-    count: 1,
-    currentPage: 1,
-  };
+const ProductListing = (props) => {
+  const [wineLists, setWineLists] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  componentDidMount() {
-    const { currentPage } = this.state;
+  const fetchWineLists = (page) => {
+    // console.log(this.state.currentPage);
+
     axios
       .get(
-        `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=${currentPage}`
+        `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=${page}`
       )
-      .then((res) => this.setState({ wineLists: res.data.value.products }));
-  }
-
-  fetchWineLists = () => {
-    const { count, currentPage } = this.state;
-    this.setState({ currentPage: this.state.currentPage + count });
-    axios
-      .get(
-        `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=${currentPage}`
-      )
-      .then((res) =>
-        this.setState({
-          wineLists: this.state.wineLists.concat(res.data.value.products),
-        })
-      );
+      .then((res) => {
+        setWineLists((previousWineLists) => [
+          ...new Set([...previousWineLists, ...res.data.value.products]),
+        ]);
+        // console.log(this.state.wineLists);
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "something went wrong!",
+        });
+      });
   };
 
-  render() {
-    return (
-      <div className="listcards-container">
-        {/* {console.log(this.state.wineLists)} */}
-        <InfiniteScroll
-          dataLength={this.state.wineLists.length}
-          next={this.fetchWineLists}
-          hasMore={true}
-          //   loader={<h4>Loading...</h4>}
-        >
-          {this.state.wineLists.map((wineList) => (
-            <ListCard
-              key={wineList.id}
-              id={wineList.id}
-              image={wineList.image}
-              name={wineList.name}
-              vintageYear={wineList.vintageYear}
-              grapeVarietes={wineList.grapeVarietes}
-              region={wineList.region}
-              country={wineList.country}
-              price={wineList.price}
-              qty={wineList.qty}
-            />
-          ))}
-        </InfiniteScroll>
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    fetchWineLists(currentPage);
+  }, [currentPage]);
+
+  let handleNext = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const search = props.search;
+  const filteredWineLists = wineLists.filter((wineList) => {
+    return wineList.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+  });
+
+  return (
+    <div className="listcards-container">
+      {/* {console.log(this.state.wineLists)} */}
+      <InfiniteScroll
+        dataLength={wineLists.length}
+        next={handleNext}
+        hasMore={true}
+        //   loader={<h4>Loading...</h4>}
+      >
+        {filteredWineLists.map((wineList) => (
+          <ListCard
+            key={wineList.id}
+            id={wineList.id}
+            image={wineList.image}
+            name={wineList.name}
+            vintageYear={wineList.vintageYear}
+            grapeVarietes={wineList.grapeVarietes}
+            region={wineList.region}
+            country={wineList.country}
+            price={wineList.price}
+            qty={wineList.qty}
+          />
+        ))}
+      </InfiniteScroll>
+    </div>
+  );
+};
+
+export default ProductListing;
