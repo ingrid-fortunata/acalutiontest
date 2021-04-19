@@ -37,4 +37,4 @@ On the wine details page:
 ### Other features:
 
 1. Responsive
-2. Deployed
+2. Deployed to heroku https://winedelivery01.herokuapp.com/
