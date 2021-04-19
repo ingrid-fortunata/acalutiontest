@@ -39,3 +39,4 @@ On the wine details page:
 1. Responsive
 2. Deployed to heroku https://winedelivery01.herokuapp.com/
 3. If no connection, will show pop up message on the wine list page
+4. Pretty scroll bar
