@@ -1,8 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+This is a project for Acalution - Wine Delivery. It consist a wine lists page and if you click on one of the card, you will be directed to the details page of a wine.
 
 In the project directory, you can run:
 
@@ -14,57 +10,31 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Some functions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the wine lists page:
 
-### `yarn build`
+1. Showing wine lists with infinite scroll until the bottom of the page (footer)
+2. Able to click on "add to cart" and show a popup message
+3. If quantity of the wine is zero (0), then unable to "add to cart" -- the button in grey color
+4. Able to click on "bookmark" icon and show a popup message
+5. If quantity of the wine is 5 or below, then will show "quantity left" bubble on golden color
+6. If vintage year is 0, don't show vintage year
+7. Able to search on specific name in the search bar
+8. Directing to the wine details page if you click on one of the card
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+On the wine details page:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Showing wine details
+2. Image can be enlarge on hover
+3. If vintage year is 0, show as "Non Vintage"
+4. Able to click on "add to cart" and show a popup message
+5. If quantity of the wine is zero (0), then unable to "add to cart" -- the button in grey color
+6. Able to click on "bookmark" icon and show a popup message
+7. If quantity of the wine is 5 or below, then will show "quantity left" bubble on golden color
+8. Able to go back to the wine list page (homepage) if you click on the "left arrow button" on the navigation or click "wine delivery image logo" or click "home" on breadcrumbs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Other features:
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Responsive
+2. Deployed
